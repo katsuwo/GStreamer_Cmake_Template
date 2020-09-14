@@ -24,6 +24,8 @@ int main(int argc, char *argv[]) {
     sink = gst_element_factory_make ("udpsink", "sink");
 
     g_object_set(source, "location", "/home/katsuwo/dat%d.mp3", NULL);
+//    g_object_set(sink, "port", 5555, NULL);
+    g_object_set(sink, "host", "192.168.10.31", NULL);
     g_object_set(sink, "port", 5555, NULL);
 
     /* Create the empty pipeline */
